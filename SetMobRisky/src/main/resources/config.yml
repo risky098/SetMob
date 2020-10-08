@@ -1,0 +1,10 @@
+#몹 설정
+zombie:
+  hp: 20
+  helmet: AIR
+  chestplate: AIR
+  leggins: AIR
+  boots: AIR
+  handitem: AIR
+
+

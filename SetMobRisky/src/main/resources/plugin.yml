@@ -1,0 +1,9 @@
+name: SetMobRisky
+version: ${project.version}
+main: risky.setmob.Mob
+author: [Risky]
+description: "Korea Developer Risky Plugin"
+api-version: 1.16
+commands:
+  몹:
+    usage: /몹 저장
