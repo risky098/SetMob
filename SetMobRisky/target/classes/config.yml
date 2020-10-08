@@ -1,10 +1,12 @@
 #몹 설정
-zombie:
-  hp: 20
-  helmet: AIR
-  chestplate: AIR
-  leggings: AIR
-  boots: AIR
-  handitem: AIR
+monsters:
+  ZOMBIE:
+    hp: 30
+    helmet: AIR
+    chestplate: AIR
+    leggings: AIR
+    boots: AIR
+    handitem: AIR
+
 
 

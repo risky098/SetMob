@@ -1,0 +1,15 @@
+monsters:
+  ZOMBIE:
+    hp: 30
+    helmet: AIR
+    chestplate: AIR
+    leggings: AIR
+    boots: AIR
+    handitem: IRON_SWORD
+  SKELETON:
+    hp: 100
+    helmet: DIAMOND_HELMET
+    chestplate: AIR
+    leggings: AIR
+    boots: AIR
+    handitem: DIAMOND_SWORD
