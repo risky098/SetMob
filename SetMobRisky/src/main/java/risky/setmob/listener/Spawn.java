@@ -2,6 +2,7 @@ package risky.setmob.listener;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Zombie;
 import org.bukkit.event.EventHandler;
@@ -23,12 +24,12 @@ public class Spawn implements Listener {
         e.getEntity();
         if(e.getEntityType() == EntityType.ZOMBIE) {
             Zombie z = (Zombie)e.getEntity();
-            z.setMaxHealth(plugin.getConfig().getDouble("zombie.hp"));
+            z.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(z.getAttribute(Attribute.GENERIC_MAX_HEALTH).getDefaultValue());
             z.setCanPickupItems(true);
             z.setAdult();
             z.getEquipment().setHelmet(new ItemStack(Material.getMaterial(plugin.getConfig().getString("zombie.helmet"))));
             z.getEquipment().setChestplate(new ItemStack(Material.getMaterial(plugin.getConfig().getString("zombie.chestplate"))));
-            z.getEquipment().setLeggings(new ItemStack(Material.getMaterial(plugin.getConfig().getString("zombie.leggins"))));
+            z.getEquipment().setLeggings(new ItemStack (Material.getMaterial (plugin.getConfig().getString ("zombie.leggings"))));
             z.getEquipment().setBoots(new ItemStack(Material.getMaterial(plugin.getConfig().getString("zombie.boots"))));
             z.getEquipment().setItemInMainHand(new ItemStack(Material.getMaterial(plugin.getConfig().getString("zombie.handitem"))));
             if(z.getFireTicks() <= 1)

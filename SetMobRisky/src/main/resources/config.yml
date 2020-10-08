@@ -3,7 +3,7 @@ zombie:
   hp: 20
   helmet: AIR
   chestplate: AIR
-  leggins: AIR
+  leggings: AIR
   boots: AIR
   handitem: AIR
 
