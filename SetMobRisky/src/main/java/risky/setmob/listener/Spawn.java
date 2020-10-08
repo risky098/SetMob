@@ -24,7 +24,9 @@ public class Spawn implements Listener {
         e.getEntity();
         if(e.getEntityType() == EntityType.ZOMBIE) {
             Zombie z = (Zombie)e.getEntity();
-            z.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(z.getAttribute(Attribute.GENERIC_MAX_HEALTH).getDefaultValue());
+            int v = plugin.getConfig().getInt("zombie.hp");
+            z.setMaxHealth(v);
+            z.setHealth(v);
             z.setCanPickupItems(true);
             z.setAdult();
             z.getEquipment().setHelmet(new ItemStack(Material.getMaterial(plugin.getConfig().getString("zombie.helmet"))));
